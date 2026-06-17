@@ -7,6 +7,8 @@ weight = 1
 
 ### Git
 
+#### Các câu lệnh phổ biến
+
 | Lệnh               | Mô Tả                                            |
 | ------------------ | ------------------------------------------------ |
 | git init           | Khởi tạo kho lưu trữ Git mới                     |
@@ -30,7 +32,7 @@ weight = 1
 | git merge          | Kết hợp các thay đổi từ nhánh khác               |
 | git cherry-pick    | Áp dụng các commit cụ thể từ nhánh khác          |
 
-- Xử Lý Xung Đột Git
+#### Xử Lý Xung Đột Git
 
 | Tình Huống                                | Giải Pháp (Source Control)                                                                         |
 | ----------------------------------------- | -------------------------------------------------------------------------------------------------- |
@@ -39,6 +41,8 @@ weight = 1
 | Giữ lại thay đổi từ nhánh đến             | Di chuột qua dấu xung đột và nhập nút "Accept Incoming Change"                                     |
 | Hủy hợp nhất và bắt đầu lại               | Nhập biểu tượng Source Control ở thanh bên, rồi nhập menu "..." và chọn "Abort Merge"              |
 | Giải quyết xung đột trong trình soạn thảo | Xung đột được đánh dấu bằng màu sắc, chỉnh sửa thủ công hoặc sử dụng giao diện giải quyết xung đột |
+
+---
 
 ### TypeScript
 
@@ -88,7 +92,7 @@ weight = 1
 - Hiểu sự khác biệt giữa merge và rebase.
 - Sử dụng git add <file> thay vì git add . khi có thể.
 
-### Key Principles
+## Key Principles
 
 - Tổ chức `src/` theo tính năng hoặc loại
 - Tách các tệp cấu hình ở mức gốc
