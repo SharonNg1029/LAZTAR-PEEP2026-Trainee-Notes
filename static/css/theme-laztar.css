@@ -105,6 +105,30 @@ h6 {
   color: var(--LAZTAR-NAVY-LIGHT) !important;
 }
 
+#body h4 {
+  font-size: 1.15rem;
+  font-weight: 600 !important;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--LAZTAR-NAVY-LIGHT) !important;
+}
+
+#body h5 {
+  font-size: 1.05rem;
+  font-weight: 600 !important;
+  margin-top: 1.2rem;
+  margin-bottom: 0.6rem;
+  color: var(--LAZTAR-NAVY-LIGHT) !important;
+}
+
+#body h6 {
+  font-size: 0.95rem;
+  font-weight: 600 !important;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--LAZTAR-NAVY-LIGHT) !important;
+}
+
 #body table,
 #body p,
 #body li {
@@ -674,4 +698,78 @@ tr:hover {
 .laztar-section-list li {
   margin-bottom: 10px;
   font-weight: 500;
+}
+
+/* Sidebar Collapse Button & Functionality */
+#sidebar-collapse-btn {
+  position: fixed;
+  left: 255px;
+  top: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.7);
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 1010;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#sidebar-collapse-btn:hover {
+  background: var(--LAZTAR-CYAN-GLOW);
+  border-color: var(--LAZTAR-CYAN-TECH);
+  color: var(--LAZTAR-CYAN-HOVER);
+  box-shadow: 0 0 8px var(--LAZTAR-CYAN-GLOW);
+}
+
+#sidebar-collapse-btn i {
+  font-size: 0.9rem;
+}
+
+@media only all and (max-width: 59.938em) {
+  #sidebar-collapse-btn {
+    left: 185px;
+  }
+}
+
+#sidebar, #body {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+}
+
+/* Collapsed Sidebar Styles */
+html.sidebar-collapsed #sidebar {
+  transform: translateX(-100%);
+}
+
+html.sidebar-collapsed #body {
+  margin-left: 0 !important;
+}
+
+html.sidebar-collapsed #sidebar-collapse-btn {
+  position: fixed;
+  left: 15px;
+  top: 15px;
+  background: var(--LAZTAR-NAVY-BRAND);
+  border: 1px solid var(--LAZTAR-CYAN-TECH);
+  color: var(--LAZTAR-CYAN-TECH);
+  box-shadow: 0 0 10px var(--LAZTAR-CYAN-GLOW);
+  border-radius: 6px;
+  width: 30px;
+  height: 30px;
+}
+
+html.sidebar-collapsed #sidebar-collapse-btn:hover {
+  color: var(--LAZTAR-CYAN-HOVER);
+  box-shadow: 0 0 12px var(--LAZTAR-CYAN-TECH);
+}
+
+/* Hide toggle button on mobile since mobile has its own hamburger menu toggle */
+@media only all and (max-width: 47.938em) {
+  #sidebar-collapse-btn {
+    display: none !important;
+  }
 }

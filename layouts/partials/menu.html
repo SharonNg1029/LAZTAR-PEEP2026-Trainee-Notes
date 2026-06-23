@@ -1,3 +1,11 @@
+<script>
+  (function() {
+    if (localStorage.getItem('sidebar-collapsed') === 'true') {
+      document.documentElement.classList.add('sidebar-collapsed');
+    }
+  })();
+</script>
+
 <nav id="sidebar" class="{{if $.Site.Params.showVisitedLinks }}showVisitedLinks{{end}}">
 
 {{ $currentNode := . }}
@@ -10,6 +18,30 @@
         {{ partial "search.html" . }}
     {{end}}
   </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var btn = document.getElementById('sidebar-collapse-btn');
+    if (btn) {
+      btn.addEventListener('click', function() {
+        var isCollapsed = document.documentElement.classList.toggle('sidebar-collapsed');
+        localStorage.setItem('sidebar-collapsed', isCollapsed);
+        
+        var icon = btn.querySelector('i');
+        if (icon) {
+          icon.className = isCollapsed ? 'fas fa-chevron-right' : 'fas fa-chevron-left';
+        }
+      });
+      
+      // Update icon state based on current class
+      var isCollapsed = document.documentElement.classList.contains('sidebar-collapsed');
+      var icon = btn.querySelector('i');
+      if (icon) {
+        icon.className = isCollapsed ? 'fas fa-chevron-right' : 'fas fa-chevron-left';
+      }
+    }
+  });
+</script>
   {{if not .Site.Params.disableLandingPageButton }}
     <section id="homelinks">
       <ul>
@@ -111,6 +143,10 @@
     </section>
   </div>
 </nav>
+
+<button id="sidebar-collapse-btn" title="Toggle Sidebar">
+  <i class="fas fa-chevron-left"></i>
+</button>
 
 {{ define "section-tree-nav" }}
 {{ $showvisitedlinks := .showvisitedlinks }}
