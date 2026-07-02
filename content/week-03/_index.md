@@ -6,8 +6,7 @@ chapter = true
 
 # Week 03
 
-Daily PEEP 2026 notes for the third week. This week I went to the office for 3 days.
+Daily PEEP 2026 notes for the third week. This week I went to the office for 2 days.
 
-- [Day 01 - Tuesday](day-01/)
-- [Day 02 - Wednesday](day-02/)
-- [Day 03 - Friday](day-03/)
+- [Day 01 - Tuesday - All day](day-01/)
+- [Day 02 - Friday - All day](day-02/)s
