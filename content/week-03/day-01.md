@@ -8,7 +8,7 @@ weight = 1
 Implement and refine the Teezy HomePage for the Teezy Mobile App on branch `project-2/feat/teezy-homepage`
 
 ### 1. Build the HomePage UI according to Figma
-- **Goal:** Design and build the HomePage UI according to the Teezy Figma design.
+
 - **Key components completed:**
   - Header, search bar, sale banner, category pills, sort dropdown, and a 2-column product grid.
   - Align spacing, padding, border radius, product card dimensions, sale banner, and bottom tab according to Figma.

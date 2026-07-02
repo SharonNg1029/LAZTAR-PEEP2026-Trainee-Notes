@@ -8,8 +8,8 @@ weight = 1
 Triển khai và hoàn thiện Teezy HomePage cho app Mobile Teezy trên nhánh `project-2/feat/teezy-homepage`
 
 ### 1. Xây dựng giao diện HomePage theo Figma
-- **Mục tiêu:** Thiết kế và xây dựng giao diện HomePage theo đúng bản thiết kế Figma của Teezy.
-- **Các phần chính đã hoàn thiện:**
+
+sCác phần chính đã hoàn thiện:**
   - Header, thanh tìm kiếm, banner khuyến mãi, danh mục dạng nhãn, nút sắp xếp và lưới sản phẩm 2 cột.
   - Căn chỉnh khoảng cách, padding, border radius, kích thước product card, sale banner và bottom tab đúng theo Figma.
   - Modal yêu cầu đăng nhập khi user ở trạng thái guest thực hiện các hành động yêu cầu đăng nhập.
